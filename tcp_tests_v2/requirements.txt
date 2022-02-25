@@ -1,0 +1,7 @@
+backoff>=1.10.0
+libais
+loguru>=0.5.3
+atlassian>=0.0.0
+atlassian-python-api
+jira
+shapely

@@ -1,0 +1,14 @@
+import shared
+import test as t
+from loguru import logger
+logger.add('logs/test.validate_no_norad_down_feed_no_norad.log', format='{time} {name} {message}', level='DEBUG',
+           retention="1 days")
+
+server = shared.Endpoints.v2_production.value
+port = shared.Ports.v2_production.value
+token = shared.Tokens.down_v2_sat_only_no_norad.value
+
+label = 'down_feed_no_norad'
+test = t.Test(server=server, port=port, token=token, max_lines=1000000, label=label)
+test.validate_norad_id()
+logger.info("TEST COMPLETED")
