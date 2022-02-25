@@ -8,9 +8,9 @@ class JiraTools:
 
     def __init__(self, label):
         self.jira = Jira(
-            url='https://spireglobal.atlassian.net',
-            username="bruce.bookman@spire.com",
-            password="HJs0GizKO7eoyMOVXaL42B4F",
+            url='depricated',
+            username="depricated",
+            password="depricated",
             cloud=True)
         self.label = label
 
